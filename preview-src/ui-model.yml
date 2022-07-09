@@ -1,0 +1,75 @@
+antoraVersion: '3.0.0'
+site:
+  url: https://antora-ui-custom.gitlab.io/antora-ui-i18n
+  title: Brand Docs
+  homeUrl: &home_url index.html
+  components:
+  - &component
+    name: docs
+    title: &component_title Documents
+    url: udhr.dyu.html
+    versions:
+    - &component_version
+      title: *component_title
+      url: udhr.en.html
+      version: 'en'
+      displayVersion: 'English'
+    - url: udhr.fr.html
+      version: 'fr'
+      displayVersion: 'Français'
+    - url: 'udhr.dyu.html'
+      version: 'dyu'
+      displayVersion: 'Julakan'
+page:
+  url: *home_url
+  home: true
+  title: Hardware and Software Requirements
+  component: *component
+  componentVersion: *component_version
+  version: 'en'
+  displayVersion: 'English'
+  module: ROOT
+  relativeSrcPath: udhr.en.html
+  editUrl: http://example.com/project-xyz/blob/master/index.adoc
+  origin:
+    private: false
+  previous:
+    content: Quickstart
+    url: '#'
+    urlType: 'internal'
+  next:
+    content: Liber Recusabo
+    url: '#'
+    urlType: 'internal'
+  breadcrumbs:
+  - content: Quickstart
+    url: '#'
+    urlType: fragment
+  - content: Software Requirements
+    url: /xyz/5.2/index.html
+    urlType: internal
+  versions:
+  - version: 'fr'
+    displayVersion: 'Français'
+    url: '#'
+  - version: 'dyu'
+    displayVersion: 'Julakan'
+    url: 'udhr.dyu.html'
+  navigation:
+  - root: true
+    items:
+    - content: *component
+      url: '#'
+      urlType: fragment
+      items:
+      - content: Brand&#8217;s Hardware &amp; Software Requirements
+        url: /xyz/5.2/index.html
+        urlType: internal
+    - content: Documents en français 
+      url: '#liber-recusabo'
+      urlType: fragment
+    - content: Sɛbɛw julakan
+      items:
+      - content: board Shortcuts
+        url: '#'
+        urlType: fragment
