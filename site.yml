@@ -20,8 +20,11 @@ content:
       - main
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
+    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+   # snapshot: true
   #supplemental_files: ./i18n_ui
   supplemental_files: ./supplemental_ui
 output:
