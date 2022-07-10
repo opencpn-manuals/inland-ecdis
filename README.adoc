@@ -8,4 +8,3 @@ There are few equipment manufacturers and OpenCPN made an effort some years ago 
 You will find mainly two types of users and skippers on the waterways:
 Large companies with bigger fleets and hired staff and families running their barge. The latter have a very small margin to survive. This is one reason why InlandENCs are free. They just can't afford them. OpenCPN fits in that niche. 
 
-
