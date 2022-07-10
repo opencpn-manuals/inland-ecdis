@@ -1,7 +1,7 @@
 site:
   title: "inland-ecdis"
   url: https://localhost
-  start_page: en@manual_en:ROOT:index.adoc
+  start_page: en@manuals:ROOT:index.adoc
 
 urls:
   html_extension_style: indexify
@@ -23,7 +23,7 @@ content:
       - main
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     #snapshot: true
     #url: ../antora-ui-default/build/ui-bundle.zip
     #supplemental_files: ./node_modules/@antora/lunr-extension/supplemental_ui
