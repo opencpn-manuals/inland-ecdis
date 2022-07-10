@@ -1,6 +1,6 @@
 site:
   title: "inland-ecdis"
-  url: https://localhost
+  url: https://localhost/
   start_page: en@manuals:ROOT:index.adoc
 
 urls:
