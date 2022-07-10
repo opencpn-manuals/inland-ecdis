@@ -9,6 +9,7 @@ asciidoc:
     skip-front-matter: true
 antora:
   extensions:
+  - require: '@antora/lunr-extension'
     languages: [en, fr]
 content:
   sources:
