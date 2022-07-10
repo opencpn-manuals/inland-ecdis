@@ -1,6 +1,6 @@
 site:
   title: "Inland Ecdis Manual"
-  url: https://opencpn-manuals.github.io/inland-ecdis/inland-ecdis
+  url: https://opencpn-manuals.github.io/inland-ecdis/inland-ecdis/
   start_page: en@manual_en:ROOT:index.adoc
 
 asciidoc:
