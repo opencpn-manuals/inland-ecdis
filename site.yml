@@ -28,4 +28,4 @@ ui:
   #supplemental_files: ./i18n_ui
   supplemental_files: ./supplemental_ui
 output:
-  dir: ./public
+  dir: ./docs
