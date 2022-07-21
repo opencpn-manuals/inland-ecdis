@@ -11,7 +11,7 @@ npm i -g @antora/site-generator@3.0.1
 antora -v
 
 # Update dependencies and build site
-antora site.yml
+antora --extension=@antora/content-aggregator site.yml
 touch docs/.nojekyll
 
 # Set up a git environment in docs
