@@ -10,7 +10,7 @@ asciidoc:
 antora:
   extensions:
     './src-list.js'
-    languages: [en, fr]
+    - languages: [en, fr]
 content:
   sources:
   - url: https://github.com/opencpn-manuals/inland-ecdis-docs.git
