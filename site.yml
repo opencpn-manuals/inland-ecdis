@@ -9,8 +9,8 @@ asciidoc:
     skip-front-matter: true
 antora:
   extensions:
-    languages: [en, fr]  
-    Require: ./src-list.js
+    languages: [en, fr]    
+    - './src-list.js'  
 content:
   sources:
   - url: https://github.com/opencpn-manuals/inland-ecdis-docs.git
