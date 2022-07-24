@@ -10,7 +10,10 @@ asciidoc:
     icons: font
 antora:
   extensions:
-    languages: [en, fr]
+    languages: [en, fr]  
+    require: ./lib/src-list.js
+    add_to_navigation: true
+    unlisted_pages_heading: Orphans
 content:
   edit_url: true
   sources:
