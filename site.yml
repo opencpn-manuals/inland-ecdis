@@ -1,5 +1,5 @@
 site:
-  title: "Inland Ecdis Manual"
+  title: "OpenCPN Inland ECDIS Manual"
   url: https://opencpn-manuals.github.io/inland-ecdis/
   start_page: en@manuals:ROOT:index.adoc
 
@@ -20,7 +20,7 @@ content:
       - main
 ui:
   bundle:
-    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ./ui-bundle.zip
     snapshot: true
 
     #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
