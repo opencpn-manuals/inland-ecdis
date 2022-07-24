@@ -11,7 +11,7 @@ asciidoc:
 antora:
   extensions:
     languages: [en, fr]  
-    require: ./lib/src-list.js
+    require: ./src-list.js
     add_to_navigation: true
     unlisted_pages_heading: Orphans
 content:
