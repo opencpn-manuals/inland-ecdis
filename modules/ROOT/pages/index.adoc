@@ -2,4 +2,8 @@
 
 xref:manual_en::index.adoc[English Manual]
 
-xref:manual_fr::index.adoc[Manuel français]
+xref:manual_fr::index.adoc[Manuel Français]
+
+xref:manual_de::index.adoc[Deutsches Handbuch]
+
+xref:manual_nl::index.adoc[Duitse handleiding]

@@ -10,7 +10,7 @@ asciidoc:
     icons: font
 antora:
   extensions:
-    languages: [en, fr]  
+    languages: [en, fr, de, nl]  
     require: ./src-list.js
     add_to_navigation: true
     unlisted_pages_heading: Orphans
@@ -21,6 +21,8 @@ content:
     start_paths:
       - fr
       - en
+      - de
+      - nl
       
     branches:
       - main
