@@ -25,8 +25,8 @@ class SourceListExtension {
     this.logger =
       this.context.require('@antora/logger')('source-list-extension')
   }
-
-  async onContentAggregated ({contentAggregate}) {
+  const aggregate = await aggregateContent(playbook)
+  async onContentAggregated ({aggregate}) {
     this.logger.info('Building sources appendix')
     let targetFiles
     const { targetName = 'inland-ecdis-docs', targetVersion = '' } = this.config
