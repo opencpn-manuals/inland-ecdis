@@ -19,7 +19,7 @@ class SourceListExtension {
   async onContentAggregated ({contentAggregate}) {
     this.logger.info('Building sources appendix')
     let targetFiles
-    const { targetName = 'manuals', targetVersion = '' } = this.config
+    const { targetName = 'inland-ecdis', targetVersion = '' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
       const referenceFilePath = nav ? nav[0] :  'modules/ROOT/pages/index.adoc'
