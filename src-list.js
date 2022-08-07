@@ -77,7 +77,7 @@ function requireGit () {
   return require(
     require.resolve('isomorphic-git', {
       paths: [
-        require.resolve(aggregateContent, { paths: module.paths })
+        require.resolve('@antora/content-aggregator', { paths: module.paths })
         + '/..'
       ]
     })
