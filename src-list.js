@@ -14,6 +14,7 @@ function requireGit() {
 
 class SourceListExtension {
   static register ({ config }) {
+	console.log("Registering an extension to build sources page");
     new SourceListExtension(this, config)
   }
 
@@ -37,6 +38,7 @@ class SourceListExtension {
       referenceFile = referenceFile ? referenceFile : files[0]
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
+		console.log("in gitdir");
         const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })
         const lastCommit = commits[0]['commit']
         const lastHash = commits[0]['oid']
