@@ -8,6 +8,7 @@ sudo apt-get install -y nodejs
 npm -v
 npm i -g @antora/cli@3.0.1
 npm i -g @antora/site-generator@3.0.1
+npm i -g @antora/content-aggregator@3.0.3
 antora -v
 
 # Update dependencies and build site
