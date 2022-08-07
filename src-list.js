@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const git = requireGit()
+const aggregateContent = require('@antora/content-aggregator')
 
 class SourceListExtension {
   static register ({ config }) {
@@ -76,7 +77,7 @@ function requireGit () {
   return require(
     require.resolve('isomorphic-git', {
       paths: [
-        require.resolve('@antora/content-aggregator', { paths: module.paths })
+        require.resolve(aggregateContent, { paths: module.paths })
         + '/..'
       ]
     })
