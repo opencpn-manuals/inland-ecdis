@@ -8,12 +8,10 @@ sudo apt-get install -y nodejs
 npm -v
 npm i -g @antora/cli@3.0.1
 npm i -g @antora/site-generator@3.0.1
-npm i -g @antora/content-aggregator@3.0.1
-
 antora -v
 
 # Update dependencies and build site
-antora --stacktrace site.yml
+antora site.yml
 touch docs/.nojekyll
 
 # Set up a git environment in docs
