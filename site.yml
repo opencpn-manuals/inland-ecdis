@@ -9,7 +9,7 @@ asciidoc:
     skip-front-matter: true
 antora:
   extensions:
-    languages: [en, fr, de, nl]
+    #languages: [en, fr, de, nl]
     - ./src-list.js
 content:
   sources:
