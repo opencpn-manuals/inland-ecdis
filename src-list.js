@@ -3,18 +3,6 @@
 const fs = require('fs')
 const git = requireGit
 
-
-function requireGit () {
-  return require(
-    require.resolve('isomorphic-git', {
-      paths: [
-        require.resolve('@antora/content-aggregator', { paths: module.paths })
-        + '/..'
-      ]
-    })
-  )
-}
-
 class SourceListExtension {
   static register ({ config }) {
     new SourceListExtension(this, config)
@@ -39,7 +27,9 @@ class SourceListExtension {
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
       const { gitdir, refhash } = referenceFile.src.origin
-      
+      if (gitdir) {
+		this.logger.info(gitdir)
+      }
     }
     if (targetFiles) {
       const rows = contentAggregate.map((
@@ -72,8 +62,26 @@ ${rows}
     }
   }
 }
-  
 
+function requireGit () {
+  return require(
+    require.resolve('isomorphic-git', {
+      paths: [
+        require.resolve('@antora/content-aggregator', { paths: module.paths })
+        + '/..'
+      ]
+    })
+  )
+}
+  
+function date_str(date) {
+  const year = '20' + ('' + date.getUTCFullYear()).slice(-2)
+  const month = ('0' + date.getUTCMonth()).slice(-2)
+  const day = ('0' + date.getUTCDay()).slice(-2)
+  const hour = ('0' + date.getUTCHours()).slice(-2)
+  const minute  =  ('0' + date.getUTCMinutes()).slice(-2)
+  return `${year}-${month}-${day} ${hour}:${minute}`
+}
   
 module.exports = SourceListExtension
   
