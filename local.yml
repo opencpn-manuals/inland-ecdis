@@ -10,7 +10,6 @@ asciidoc:
     icons: font
 antora:
   extensions:
-    - require: '@antora/content-aggregator'
     - './src-list.js'
     #languages: [en, fr, de, nl]  
 
