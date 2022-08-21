@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "npx antora site.yml"
+    "build": "npx antora site.yml",
     "server": "npm run clean-install;npm run local",
     "clean-build": "npm run clean-install;npm run remote",
     "clean-install": "rm -rf node_modules/ .cache/ public/ ;npm i --cache=.cache/npm; npm run lunr; npm run gettext",
