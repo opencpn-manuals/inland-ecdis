@@ -1,38 +1,32 @@
 {
-  "name": "inland-ecdis",
-  "version": "1.0.0",
-  "description": "OpenCPN Inland Ecdis Manual",
+  "name": "opencpn-manuals",
+  "version": "0.1.0",
+  "description": "Experimental update of OpenCPN Antora manuals. ",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "doc": "docs"
   },
   "scripts": {
-    "server": "npm run clean-install;npm run local",
-    "clean-build": "npm run clean-install;npm run remote",
-    "clean-install": "rm -rf node_modules/ .cache/ public/ ;npm i --cache=.cache/npm; npm run lunr; npm run gettext",
-    "bundle": "pushd ../antora-ui-i18n; SOURCEMAPS=true gulp bundle; popd;",
-    "local": "npx antora local.yml --stacktrace ; npm run http-server",
-    "docs": "npx antora local.yml  --stacktrace --fetch; npm run http-server",
-    "remote": "npx antora playbook.yml --stacktrace --fetch",
-    "lunr": "cp -pr ./node_modules/@antora/lunr-extension/supplemental_ui .",
-    "gettext": "cp ./node_modules/gettext.js/dist/gettext.iife.min.js ./supplemental_ui/js/vendor/",
-    "http-server": "node_modules/.bin/http-server ./public/"
+    "build": "npx antora site.yml"
   },
-  "author": "Boyd Kelly",
-  "license": "ISC",
-  "dependencies": {
-    "@antora/lunr-extension": "^1.0.0-alpha.5",
-    "@antora/xref-validator": "git+https://gitlab.com/antora/xref-validator#v1.0.0-alpha.14",
-    "gettext.js": "^1.1.1",
-    "gulp-cli": "^2.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leamas/manuals-v2.git"
   },
+  "author": "Alec Leamas",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/leamas/manuals-v2/issues"
+  },
+  "homepage": "https://github.com/leamas/manuals-v2#readme",
   "devDependencies": {
-    "@antora/cli": "3.0.3",
-    "@antora/site-generator": "3.0.3",
-    "@antora/content-aggregator": "3.0.3",    
-    "@fontsource/noto-sans": "^4.5.1",
-    "@fontsource/noto-sans-mono": "^4.5.1",
-    "http-server": "^13.0.2",
+    "@antora/cli": "3.0.0",
+    "npm": "8.5.1"
+  },
+  "dependencies": {
+    "@antora/logger": "^3.0.1",
+    "@antora/lunr-extension": "^1.0.0-alpha.5",
+    "@antora/site-generator": "^3.0.1",
     "isomorphic-git": "^1.12.0"
   }
 }
