@@ -33,5 +33,6 @@
     "@fontsource/noto-sans": "^4.5.1",
     "@fontsource/noto-sans-mono": "^4.5.1",
     "http-server": "^13.0.2"
+    "isomorphic-git": "^1.12.0"
   }
 }
