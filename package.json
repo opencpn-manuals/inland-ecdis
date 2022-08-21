@@ -4,7 +4,7 @@
   "description": "OpenCPN Inland Ecdis Manual",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "doc": "docs"
   },
   "scripts": {
     "build": "npx antora site.yml",
