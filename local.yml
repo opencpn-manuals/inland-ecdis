@@ -1,6 +1,6 @@
 site:
   title: "OpenCPN Inland ECDIS Manual"
-  url: https://localhost/
+  url: https://opencpn-manuals.github.io/inland-ecdis/
   start_page: en@manuals:ROOT:index.adoc
 
 urls:
@@ -10,10 +10,10 @@ asciidoc:
     icons: font
 antora:
   extensions:
-    languages: [en, fr, de, nl]  
-    require: ./src-list.js
-    add_to_navigation: true
-    unlisted_pages_heading: Orphans
+    - require: '@antora/content-aggregator'
+    - './src-list.js'
+    #languages: [en, fr, de, nl]  
+
 content:
   edit_url: true
   sources:
@@ -26,6 +26,8 @@ content:
       
     branches:
       - main
+      
+
 ui:
   bundle:
     url: ./ui-bundle.zip
@@ -36,3 +38,8 @@ ui:
 output:
   dir: ./public
 
+runtime:
+  fetch: true
+  log:
+    format: pretty
+    level: info
