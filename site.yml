@@ -10,7 +10,7 @@ asciidoc:
 antora:
   extensions:
     - './src-list.js'
-    languages: [en, fr, de, nl]  
+      languages: [en, fr, de, nl]  
     
 content:
   sources:
