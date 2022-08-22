@@ -1,7 +1,8 @@
 'use strict'
 
 const fs = require('fs')
-const git = requireGit
+//const git = requireGit
+const git = require('isomorphic-git')
 
 class SourceListExtension {
   static register ({ config }) {
@@ -28,8 +29,16 @@ class SourceListExtension {
       referenceFile = referenceFile ? referenceFile : files[0]
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
-		this.logger.info(gitdir)
-		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })		
+		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })
+        const lastCommit = commits[0]['commit']
+        const lastHash = commits[0]['oid']
+        const lastCommitSummary = {
+          name: `${version ? version + '@' : ''}${name}`,
+          commit: lastHash.substr(0, 7),
+          subject: lastCommit.message.split(/$/m)[0],
+          date: new Date(lastCommit.author.timestamp * 1000),
+        }
+        componentVersionData.lastCommitSummary = lastCommitSummary		
       }
     }
     if (targetFiles) {
