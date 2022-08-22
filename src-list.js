@@ -27,20 +27,20 @@ class SourceListExtension {
     async onContentAggregated ({contentAggregate}) {
     this.logger.info('Building sources appendix')
     let targetFiles
-    const { targetName = 'inland-ecdis-docs', targetVersion = '' } = this.config
+    const { targetName = 'manuals', targetVersion = 'en' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
       this.logger.info('Here')
-      const referenceFilePath = nav ? nav[0] :  'modules/ROOT/pages/index.adoc'
+      const referenceFilePath = nav ? nav[0] :  'en/modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
-      this.logger.info(referenceFilePath)      
+      //this.logger.info(referenceFilePath)      
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
 		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })
         const lastCommit = commits[0]['commit']
-        this.logger.info(lastCommit)
+        //this.logger.info(lastCommit)
         const lastHash = commits[0]['oid']
         const lastCommitSummary = {
           name: `${version ? version + '@' : ''}${name}`,
@@ -48,6 +48,10 @@ class SourceListExtension {
           subject: lastCommit.message.split(/$/m)[0],
           date: new Date(lastCommit.author.timestamp * 1000),
         }
+        this.logger.info('name')
+        this.logger.info(lastCommitSummary.name)
+        this.logger.info(lastCommitSummary.commit)
+        
         componentVersionData.lastCommitSummary = lastCommitSummary		
       }
     }
@@ -57,6 +61,10 @@ class SourceListExtension {
         {lastCommitSummary: { name, commit, subject, date }}
       ) => `| ${name} | ${commit} | ${date_str(date)}| ${subject}`).join('\n')
       const now = date_str(new Date())
+      
+      this.logger.info(rows)
+      //this.logger.info(lastCommitSummary.commit)
+      
       const contents = Buffer.from(`
 = Table of Manual Sources
 
@@ -70,11 +78,14 @@ ${rows}
 |====
 `.trim()
 )
+      
+      //this.logger.info(contents)
+      
       targetFiles.push({
-        path: 'modules/ROOT/pages/sources.adoc',
+        path: 'en/modules/ROOT/pages/sources.adoc',
         contents,
         src: {
-          path: 'modules/ROOT/pages/sources.adoc',
+          path: 'en/modules/ROOT/pages/sources.adoc',
           basename: 'sources.adoc',
           stem: 'sources',
           extname: '.adoc',

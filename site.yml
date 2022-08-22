@@ -10,7 +10,7 @@ asciidoc:
 antora:
   extensions:
   - require: ./src-list.js
-    add_to_navigation: true
+    trace: true
     languages: [en, fr, de, nl]  
     
 content:

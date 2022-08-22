@@ -11,8 +11,9 @@ asciidoc:
 antora:
   extensions:
   - require: ./src-list.js
+    trace: true
     languages: [en, fr, de, nl]  
-
+    
 content:
   edit_url: true
   sources:
