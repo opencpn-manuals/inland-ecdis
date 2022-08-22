@@ -82,10 +82,10 @@ ${rows}
       //this.logger.info(contents)
       
       targetFiles.push({
-        path: 'en/modules/ROOT/pages/sources.adoc',
+        path: 'modules/ROOT/pages/sources.adoc',
         contents,
         src: {
-          path: 'en/modules/ROOT/pages/sources.adoc',
+          path: 'modules/ROOT/pages/sources.adoc',
           basename: 'sources.adoc',
           stem: 'sources',
           extname: '.adoc',

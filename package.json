@@ -1,6 +1,6 @@
 {
   "name": "inland-ecdis",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "OpenCPN Inland Ecdis Manual",
   "main": "index.js",
   "directories": {
@@ -30,10 +30,10 @@
 
   },
   "devDependencies": {
-    "@antora/logger": "^3.0.3",	  
-    "@antora/cli": "3.0.3",
-    "@antora/site-generator": "3.0.3",
-    "@antora/content-aggregator": "3.0.3",    
+    "@antora/logger": "^3.0.1",	  
+    "@antora/cli": "3.0.1",
+    "@antora/site-generator": "3.0.1",
+    "@antora/content-aggregator": "3.0.1",    
     "@fontsource/noto-sans": "^4.5.1",
     "@fontsource/noto-sans-mono": "^4.5.1",
     "http-server": "^13.0.2",
