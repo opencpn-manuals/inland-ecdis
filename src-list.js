@@ -2,7 +2,12 @@
 
 const fs = require('fs')
 //const git = requireGit
-const git = require('isomorphic-git')
+const git = require('isomorphic-git', {
+      paths: [
+        require.resolve('@antora/content-aggregator', { paths: module.paths })
+        + '/..'
+      ]
+    })
 
 class SourceListExtension {
   static register ({ config }) {
@@ -15,22 +20,27 @@ class SourceListExtension {
       .on('contentAggregated', this.onContentAggregated.bind(this))
     this.logger =
       this.context.require('@antora/logger')('source-list-extension')
+    
+      require('@antora/content-aggregator', { paths: module.paths })
+       
   }
-  
     async onContentAggregated ({contentAggregate}) {
     this.logger.info('Building sources appendix')
     let targetFiles
-    const { targetName = 'inland-ecdis-docs/en', targetVersion = '' } = this.config
+    const { targetName = 'inland-ecdis-docs', targetVersion = '' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
+      this.logger.info('Here')
       const referenceFilePath = nav ? nav[0] :  'modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
+      this.logger.info(referenceFilePath)      
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
 		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })
         const lastCommit = commits[0]['commit']
+        this.logger.info(lastCommit)
         const lastHash = commits[0]['oid']
         const lastCommitSummary = {
           name: `${version ? version + '@' : ''}${name}`,
@@ -42,6 +52,7 @@ class SourceListExtension {
       }
     }
     if (targetFiles) {
+	  this.logger.info('Here in targetFiles')
       const rows = contentAggregate.map((
         {lastCommitSummary: { name, commit, subject, date }}
       ) => `| ${name} | ${commit} | ${date_str(date)}| ${subject}`).join('\n')
