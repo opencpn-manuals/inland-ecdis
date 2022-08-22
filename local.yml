@@ -10,7 +10,7 @@ asciidoc:
     icons: font
 antora:
   extensions:
-  - require: './src-list.js'
+  - require: ./src-list.js
     languages: [en, fr, de, nl]  
 
 content:

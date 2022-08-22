@@ -19,16 +19,17 @@ class SourceListExtension {
     async onContentAggregated ({contentAggregate}) {
     this.logger.info('Building sources appendix')
     let targetFiles
-    const { targetName = 'inland-ecdis-docs', targetVersion = '' } = this.config
+    const { targetName = 'inland-ecdis-docs/en', targetVersion = '' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
-      const referenceFilePath = nav ? nav[0] :  'modules/ROOT/pages/index.adoc'
+      const referenceFilePath = nav ? nav[0] :  'en@modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
 		this.logger.info(gitdir)
+		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })		
       }
     }
     if (targetFiles) {

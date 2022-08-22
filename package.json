@@ -19,8 +19,8 @@
     "gettext": "cp ./node_modules/gettext.js/dist/gettext.iife.min.js ./supplemental_ui/js/vendor/",
     "http-server": "node_modules/.bin/http-server ./public/"
   },
-  "author": "Boyd Kelly",
-  "license": "ISC",
+  "author": "Mike Rossiter",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "@antora/lunr-extension": "^1.0.0-alpha.5",
     "@antora/xref-validator": "git+https://gitlab.com/antora/xref-validator#v1.0.0-alpha.14",
