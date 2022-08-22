@@ -23,7 +23,7 @@ class SourceListExtension {
     const { targetName = 'inland-ecdis-docs/en', targetVersion = '' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
-      const referenceFilePath = nav ? nav[0] :  'en@modules/ROOT/pages/index.adoc'
+      const referenceFilePath = nav ? nav[0] :  'modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
