@@ -30,7 +30,7 @@ class SourceListExtension {
     const { targetName = 'manuals', targetVersion = 'en' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
-      this.logger.info('Here')
+      //this.logger.info('Here')
       const referenceFilePath = nav ? nav[0] :  'en/modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
@@ -48,21 +48,21 @@ class SourceListExtension {
           subject: lastCommit.message.split(/$/m)[0],
           date: new Date(lastCommit.author.timestamp * 1000),
         }
-        this.logger.info('name')
-        this.logger.info(lastCommitSummary.name)
-        this.logger.info(lastCommitSummary.commit)
+        //this.logger.info('name')
+        //this.logger.info(lastCommitSummary.name)
+        //this.logger.info(lastCommitSummary.commit)
         
         componentVersionData.lastCommitSummary = lastCommitSummary		
       }
     }
     if (targetFiles) {
-	  this.logger.info('Here in targetFiles')
+	  //this.logger.info('Here in targetFiles')
       const rows = contentAggregate.map((
         {lastCommitSummary: { name, commit, date, subject}}
-      ) => `| ${name} | ${commit} | ${date_str(date)}| ${subject}`).join('\n')
+      ) => `| ${name} | ${commit} | ${date_str(date)} | ${subject}`).join('\n')
       const now = date_str(new Date())
       
-      this.logger.info(rows)
+      //this.logger.info(rows)
       //this.logger.info(lastCommitSummary.commit)
       
       const contents = Buffer.from(`
@@ -108,7 +108,7 @@ function requireGit () {
   
 function date_str(date) {
   const year = '20' + ('' + date.getUTCFullYear()).slice(-2)
-  const month = ('0' + date.getUTCMonth()).slice(-2)
+  const month = ('0' + (date.getUTCMonth() + 1)).slice(-2)
   const day = ('0' + date.getUTCDay()).slice(-2)
   const hour = ('0' + date.getUTCHours()).slice(-2)
   const minute  =  ('0' + date.getUTCMinutes()).slice(-2)
