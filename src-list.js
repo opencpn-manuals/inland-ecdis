@@ -108,10 +108,10 @@ function requireGit () {
   
 function date_str(date) {
   const year = '20' + ('' + date.getUTCFullYear()).slice(-2)
-  const month = ('0' + (date.getUTCMonth() + 1)).slice(-2)
-  const day = ('0' + date.getUTCDay()).slice(-2)
-  const hour = ('0' + date.getUTCHours()).slice(-2)
-  const minute  =  ('0' + date.getUTCMinutes()).slice(-2)
+  const month = date.getUTCMonth() + 1)
+  const day = date.getDate()
+  const hour = date.getUTCHours()
+  const minute  = date.getUTCMinutes()
   return `${year}-${month}-${day} ${hour}:${minute}`
 }
   
