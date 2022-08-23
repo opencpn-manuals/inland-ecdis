@@ -58,7 +58,7 @@ class SourceListExtension {
     if (targetFiles) {
 	  this.logger.info('Here in targetFiles')
       const rows = contentAggregate.map((
-        {lastCommitSummary: { name, commit, date, subject}}
+        {lastCommitSummary: { name, commit, subject, date }}
       ) => `| ${name} | ${commit} | ${date_str(date)}| ${subject}`).join('\n')
       const now = date_str(new Date())
       
