@@ -105,13 +105,17 @@ function requireGit () {
     })
   )
 }
+
+function pad(n) {
+    return n<10 ? '0'+n : n;
+}
   
 function date_str(date) {
-  const year = '20' + ('' + date.getUTCFullYear()).slice(-2)
-  const month = date.getUTCMonth() + 1
-  const day = date.getDate()
-  const hour = date.getUTCHours()
-  const minute  = date.getUTCMinutes()
+  const year = date.getUTCFullYear()
+  const month = pad(date.getUTCMonth() + 1)
+  const day = pad(date.getDate())
+  const hour = pad(date.getUTCHours())
+  const minute  = pad(date.getUTCMinutes())
   return `${year}-${month}-${day} ${hour}:${minute}`
 }
   
