@@ -1,7 +1,6 @@
 'use strict'
 
 const fs = require('fs')
-//const git = requireGit
 const git = require('isomorphic-git', {
       paths: [
         require.resolve('@antora/content-aggregator', { paths: module.paths })
@@ -30,17 +29,14 @@ class SourceListExtension {
     const { targetName = 'manuals', targetVersion = 'en' } = this.config
     for (const componentVersionData of contentAggregate) {
       const { name, version, files, nav } = componentVersionData
-      //this.logger.info('Here')
       const referenceFilePath = nav ? nav[0] :  'en/modules/ROOT/pages/index.adoc'
       if (name === targetName && version === targetVersion) targetFiles = files
       let referenceFile = files.find(({ path }) => path === referenceFilePath)
       referenceFile = referenceFile ? referenceFile : files[0]
-      //this.logger.info(referenceFilePath)      
       const { gitdir, refhash } = referenceFile.src.origin
       if (gitdir) {
 		const commits = await git.log({ fs, gitdir, depth: 1, ref: refhash })
         const lastCommit = commits[0]['commit']
-        //this.logger.info(lastCommit)
         const lastHash = commits[0]['oid']
         const lastCommitSummary = {
           name: `${version ? version + '@' : ''}${name}`,
@@ -48,23 +44,14 @@ class SourceListExtension {
           subject: lastCommit.message.split(/$/m)[0],
           date: new Date(lastCommit.author.timestamp * 1000),
         }
-        //this.logger.info('name')
-        //this.logger.info(lastCommitSummary.name)
-        //this.logger.info(lastCommitSummary.commit)
-        
         componentVersionData.lastCommitSummary = lastCommitSummary		
       }
     }
     if (targetFiles) {
-	  //this.logger.info('Here in targetFiles')
       const rows = contentAggregate.map((
         {lastCommitSummary: { name, commit, date, subject}}
       ) => `| ${name} | ${commit} | ${date_str(date)} | ${subject}`).join('\n')
-      const now = date_str(new Date())
-      
-      //this.logger.info(rows)
-      //this.logger.info(lastCommitSummary.commit)
-      
+      const now = date_str(new Date())      
       const contents = Buffer.from(`
 = Table of Manual Sources
 
@@ -78,9 +65,6 @@ ${rows}
 |====
 `.trim()
 )
-      
-      //this.logger.info(contents)
-      
       targetFiles.push({
         path: 'modules/ROOT/pages/sources.adoc',
         contents,
@@ -93,17 +77,6 @@ ${rows}
       })
     }
   }
-}
-
-function requireGit () {
-  return require(
-    require.resolve('isomorphic-git', {
-      paths: [
-        require.resolve('@antora/content-aggregator', { paths: module.paths })
-        + '/..'
-      ]
-    })
-  )
 }
 
 function pad(n) {
