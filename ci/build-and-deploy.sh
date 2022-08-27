@@ -24,6 +24,8 @@ npm i
 npm run build
 touch $SITE_DIR/.nojekyll
 
+git mv ./_ ./docs/manuals
+
 # Set up a git environment in $SITE_DIR
 author_email=$(git log -1 --pretty=format:"%ae")
 cd $SITE_DIR
