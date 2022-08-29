@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang=nl>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AIS :: OpenCPN Inland ECDIS Manual</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+    <link rel="alternate" hreflang="nl" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl/AIS/ais.html" >
+    <link rel="alternate" hreflang="fr" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr/AIS/ais.html" >
+    <link rel="alternate" hreflang="en" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en/AIS/ais.html" >
+    <link rel="alternate" hreflang="de" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/de/AIS/ais.html" >
+
+<script src="../../../_/js/vendor/gettext.iife.js" type="text/javascript"></script>
+<script>
+  var i18n = window.i18n();
+  // include and initialize the rollbar library with your access token
+  // i18n.setMessages(domain, locale, messages, plural_form);
+  i18n.setMessages('messages', 'fr', {
+      "Welcome": "Bienvenue",
+      "Contents": "Sur cette page...",
+      "Edit this page": "Éditer cette page...",
+      "Search the docs": "Rechercher...",
+      "Component": "Composant",
+      "Prev": "Précédent.",
+      "Next": "Suivant",
+      "Document language": "Langue du document",
+      "Site language": "Langue du site",
+      "There is %1 apple": [
+          "Il y a %1 pomme",
+          "Il y a %1 pommes"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'de', {
+      "Welcome": "I dan se",
+      "Contents": "Inhalt",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'nl', {
+      "Welcome": "I dan se",
+      "Contents": "inhoud",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/inland-ecdis">OpenCPN Inland ECDIS Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manuals" data-version="nl">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Multilingual Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Inland ECDIS Handleiding</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../howtouse/howtouse.html">Gebruik van de handleiding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../installation/installation.html">OpenCPN installeren</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting_started/getting_started.html">Thuisscherm</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../charts/charts.html">Kaarten</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../GPS/gps.html">GNSS</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ais.html">AIS</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Multilingual Manual</span>
+    <span class="version"><img class=icon src="../../_/img/globe.svg">&nbsp;Nederlands</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl">Multilingual Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">Nederlands</a>
+        </li>
+        <li class="version">
+          <a href="../../fr/index.html">Français</a>
+        </li>
+        <li class="version">
+          <a href="../../en/index.html">English</a>
+        </li>
+        <li class="version">
+          <a href="../../de/index.html">Deutsch</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../en/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Multilingual Manual</a></li>
+    <li><a href="../index.html">OpenCPN Inland ECDIS Handleiding</a></li>
+    <li><a href="ais.html">AIS</a></li>
+  </ul>
+</nav>
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other translations of page">Nederlands</button>
+  <div class="version-menu">
+    <a class="version is-current" href="ais.html">Nederlands</a>
+    <a class="version" href="../../fr/AIS/ais.html">Français</a>
+    <a class="version" href="../../en/AIS/ais.html">English</a>
+    <a class="version" href="../../de/AIS/ais.html">Deutsch</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/opencpn-manuals/inland-ecdis-docs/edit/main/nl/modules/AIS/pages/ais.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AIS</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.0.jpg" alt="9.0"></span></p>
+</div>
+<div class="paragraph">
+<p>"AIS Pilotplug naar USB" kabel</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.00.jpg" alt="9.00"></span></p>
+</div>
+<div class="paragraph">
+<p>Basis AIS ontvanger</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title"><strong>OpenCPN instellingen</strong></div>
+<div class="paragraph">
+<p>Om de beste prestaties te bereiken en te voorkomen dat het scherm volloopt moeten de AIS instellingen worden aangepast. Dit zal ertoe bijdragen dat het aantal onrelevante alarmen worden teruggebracht.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verbinding_maken_met_de_ais"><a class="anchor" href="#_verbinding_maken_met_de_ais"></a>Verbinding maken met de AIS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Een AIS-ontvanger kan op dezelfde manier worden aangesloten als de GPS. De gebruikelijke AIS-data snelheid is 38400, in plaats van 4800 baud rate.
+Een gemakkelijke weg is om een "AIS Pilotplug naar USB" kabel te gebruiken. Dit geeft je ook een GPS-positie (geen aparte GPS-functie nodig)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instellen_ais_objecten"><a class="anchor" href="#_instellen_ais_objecten"></a>Instellen AIS objecten.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><b class="button">Opties</b> <b class="button">Eigen Schip en AIS Objecten</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>AIS Targets</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.1.jpg" alt="9.1"></span></p>
+</div>
+<div class="paragraph">
+<p>Typische instellingen worden weergegeven.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.2.jpg" alt="9.2"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ais_object_informatie"><a class="anchor" href="#_ais_object_informatie"></a>AIS object Informatie</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>rechtermuisklik</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.3.jpg" alt="9.3"></span></p>
+</div>
+<div class="paragraph">
+<p>Over de tekst bewegen geeft de naam, MMSI-nummer en nationaliteit van het schip weer.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.4.jpg" alt="9.4"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>AIS objectgegevens &#8230;&#8203;</em></strong> (Klasse B AIS)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.5.jpg" alt="9.5"></span></p>
+</div>
+<div class="paragraph">
+<p>Het schip waar de aandacht op is gevestigd wordt aangegeven met een onderbroken rechthoek.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.6.jpg" alt="9.6"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>AIS objectgegevens &#8230;&#8203;</em></strong> (Klasse B AIS)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.7.jpg" alt="9.7"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>AIS objectenlijst&#8230;&#8203;</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.8.jpg" alt="9.8"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interpreteren_van_de_ais_informatie"><a class="anchor" href="#_interpreteren_van_de_ais_informatie"></a>Interpreteren van de AIS informatie</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">AIS_Icoon</th>
+<th class="tableblock halign-left valign-top">Informatie</th>
+<th class="tableblock halign-left valign-top">AIS_Icoon</th>
+<th class="tableblock halign-left valign-top">Informatie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/sart4.png" alt="image" width="52" height="48"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Een AIS Een SART melding is een <strong>distres</strong> alarm en is gelijk aan een <strong>“Mayday”</strong> bericht. Meer
+over AIS <a href="ais/sart.html">sart</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/classb.png" alt="image" width="45" height="46"></span>..</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">De V-vorm geeft een klasse B object aan. Sleepboten en loodsboten werken heel vaak met Class B transponders. Deze zijn vaak speciaal ontworpen voor
+kleine commerciële boten, vissersboten en pleziervaartuigen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/sart5.png" alt="image" width="45" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Icoon weergegeven
+wanneer het <strong>testen</strong> van een AIS-SART apparaat wordt uitgevoerd..</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dark-green.png" alt="afbeelding"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doelstellingen moeten voldoen aan
+de Euro <a href="http://www.cruisersforum.com/forums/tags/ais.html">AIS</a>
+Inland specificatie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/nr9.png" alt="image" width="51" height="49"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vliegtuigen die deelnemen aan zoek- en reddingsacties.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/inland-blue.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dit
+schip heeft de "Inland Blauwe vlag of bord" aangezet, dit is een onderdeel van de Europese,
+Inland AIS standaard. Het “Blauwe Vlag”-signaal, op de binnenwateren
+geeft aan dat het vaartuig een “stuurboord-stuurboord” passage of
+op een kruising aanvraagt. Dit blauwe signaal wordt handmatig aan/uit gezet door het betreffende schip.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-red.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Potentiëelgevaar.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aton_std.png" alt="image" width="45" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Een Aton, is een hulpmiddel om te navigeren, bijvoorbeeld een vuurtoren of een boei met een AIS
+zender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-yellow.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geen gevaar Niet geïdentificeerd (Reisdoel gegevens niet ontvangen)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aton_off.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Een Aton,  is een hulpmiddel voor de navigatie als aanduiding van objecten, die niet op de aangegeven plaats liggen. Als voorbeeld een boei uigerust met AIS die op drift is geraakt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-lemon.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geen gevaar
+Niet geïdentificeerd (naam uit opgeslagen gegevens)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/vaton.png" alt="image" width="45" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtuele Aton,
+Virtuele aton is een hulpmiddel voor de navigatie, geen echte markering. Kan handig zijn voor een reeks van
+situaties. Een nieuw wrak is één voorbeeld.
+<a href="http://www.gla-rrnav.org/radionavigation/ais/virtual_aton.html">Further.</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-green.png" alt="image" width="50" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geen gevaar
+geïdentificeerd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/33vofpos.png" alt="image" width="46" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtuele Aton (niet op zijn positie) Dit gezien in het "wild", maar het kan een
+configuratiefout zijn. (Oude stijl weergave.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-lost.png" alt="image" width="50" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verdwenen AIS object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/basestn.png" alt="image" width="45" height="43"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AIS basis
+station</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-grey.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Een schip die zijn fix positie heeft verloren .  Wordt weergegeven op de laatst bekende
+positie.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">De volgende tagets worden alleen getoond als DSC berichten, GpsGate
+mesages, Radar of APRS berichten worden gemengd met de inkomende AIS
+stream, door gebruik te maken van, bijvoorbeeld een multiplexer. Meer op de volgende
+pagina&#8217;s.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/notundcom.png" alt="image" width="50" height="54"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaartuig niet
+onder commando.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dsc-ok.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSC Station. Alleen de DSC boodschap ontvangen. De positie bevat slechts
+graden en minuten van Breedtegraad en Lengtegraad</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/restrman_1.png" alt="image" width="51" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaartuig
+met beperkte manoeuvreercapaciteit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dse1.png" alt="image" width="44" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSC Station. DSC
+<strong>en</strong> DSE berichten ontvangen. Het DSE bericht bevat de ontbrekende
+decimalen van Breedtegraad en Lengtegraad.. Het resultaat is een veel
+accurater standpunt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ifeahche_1.png" alt="image" width="51" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaartuig
+beperkt door zijn diepgang.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dsc-not-ok.png" alt="image" width="45" height="42"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSC
+Station zendt een <strong>noodsignaal</strong>  uit. Behandel dit als een <strong>“Mayday”</strong>
+oproep.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aground.png" alt="image" width="52" height="52"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaartuig aan de grond</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/bud-icon.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GpsGate Buddy object.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/fishing.png" alt="image" width="51" height="45"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaartuig
+betrokken bij het vissen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/arpa2.png" alt="image" width="45" height="49"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARPA objecten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/hsc.png" alt="image" width="50" height="52"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hoge Snelheid- en
+draagvleugel vaartuigen.. Dit omvat Hydrofoils, Hovercrafts en laag
+vliegende vaartuigen die het als grondeffect gebruiken.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aprs.png" alt="image" width="44" height="48"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AIS objecten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-moor.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Voor anker of afgemeerd. Wordt weergegeven wanneer de verzonden "Navigatie status" "voor anker
+anker" of "afgemeerd" is. Er is geen garantie dat deze status correct is,
+omdat deze handmatig wordt ingesteld op het uitzendende schip…</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/moored.png" alt="image" width="54" height="40"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">…wordt
+geïllustreerd door dit schip. Let op de zwarte lijn op de gele cirkel. Dit geeft aan
+dat het vaartuig naar bakboord (links) gaat, ook te merken aan de
+vertraging van de weergave update. ROT - De mate van het draaien is beschikbaar in het "Ais
+Target Query" dialoogvenster, via het rechter klik menu.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ais_voorbeelden"><a class="anchor" href="#_ais_voorbeelden"></a>AIS voorbeelden</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.9.jpg" alt="9.9"></span></p>
+</div>
+<div class="paragraph">
+<p>Een schip lijkt op dit moment van koers te veranderen en lijkt 'onze' vaarweg in te varen.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>rechtsklik</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.10.jpg" alt="9.10"></span></p>
+</div>
+<div class="paragraph">
+<p>Het vaartuig is geïdentificeerd.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.11.jpg" alt="9.11"></span></p>
+</div>
+<div class="paragraph">
+<p>'Zeldenrust' is een potentieel gevaar en heeft een waarschuwing veroorzaakt op basis van de instellingen die zijn ingevoerd in OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p>Lengte pijl COG (koers over de grond) voorspelling is ingesteld op drie minuten.</p>
+</div>
+<div class="paragraph">
+<p>De rode verlengingslijn van de COG (koers over de grond) voorspelling helpt met een schatting van de tijd aan de CPA, als <em>doel zoekopdracht</em> niet is gebruikt.</p>
+</div>
+<div class="paragraph">
+<p>De geschatte posities van de schepen bij CPA worden weergegeven door blauwe stippen.</p>
+</div>
+<div class="paragraph">
+<p>De gele gemarkeerde lijn geeft de afstand weer bij de CPA.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.14.jpg" alt="9.14"></span></p>
+</div>
+<div class="paragraph">
+<p>"Zeldenrust" is verder opgedraaid en zal nu aan onze bakboord zijde passeren. CPA 48,5 m</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.15.jpg" alt="9.15"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.17.jpg" alt="9.17"></span></p>
+</div>
+<div class="paragraph">
+<p>"Zeldenrust" is voorbij en de vaarweg is weer vrij.</p>
+</div>
+<div class="paragraph">
+<p>Het schip bij de Neptunus reparatie werf lijkt een potentieel gevaar,  het is echter afgemeerd.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://github.com/Rasbats/antora-ui-default
+  </p>
+</footer>
+<script type="text/javascript">
+(function() {
+  var input = document.getElementById ("search-input")
+  var searchText = i18n.gettext('Search the docs')
+  input.placeholder = searchText
+})();
+
+var brand = document.getElementsByClassName("navbar-brand")[0]
+var items = brand.getElementsByClassName("navbar-item");
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i])
+    var title = i18n.gettext (items[i].innerHTML)
+    items[i].innerHTML = title
+  }
+
+  var site = document.getElementById("site-lang")
+  var doc = document.getElementById("page-lang")
+  console.log(doc)
+  site.title = i18n.gettext('Site language')
+
+  if(document.getElementById('page-lang') != null){
+      doc.title = i18n.gettext('Document language')
+    }
+
+  var edit = document.getElementsByClassName("edit-this-page")[0]
+  if (document.getElementsByClassName("edit-this-page").length > 0) {
+      edit.innerHTML = i18n.gettext('Edit this page')
+    }
+
+</script>
+
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

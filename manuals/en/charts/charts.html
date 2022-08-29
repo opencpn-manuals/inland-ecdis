@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Charts :: OpenCPN Inland ECDIS Manual</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+    <link rel="alternate" hreflang="nl" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl/charts/charts.html" >
+    <link rel="alternate" hreflang="fr" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr/charts/charts.html" >
+    <link rel="alternate" hreflang="en" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en/charts/charts.html" >
+    <link rel="alternate" hreflang="de" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/de/charts/charts.html" >
+
+<script src="../../../_/js/vendor/gettext.iife.js" type="text/javascript"></script>
+<script>
+  var i18n = window.i18n();
+  // include and initialize the rollbar library with your access token
+  // i18n.setMessages(domain, locale, messages, plural_form);
+  i18n.setMessages('messages', 'fr', {
+      "Welcome": "Bienvenue",
+      "Contents": "Sur cette page...",
+      "Edit this page": "Éditer cette page...",
+      "Search the docs": "Rechercher...",
+      "Component": "Composant",
+      "Prev": "Précédent.",
+      "Next": "Suivant",
+      "Document language": "Langue du document",
+      "Site language": "Langue du site",
+      "There is %1 apple": [
+          "Il y a %1 pomme",
+          "Il y a %1 pommes"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'de', {
+      "Welcome": "I dan se",
+      "Contents": "Inhalt",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'nl', {
+      "Welcome": "I dan se",
+      "Contents": "inhoud",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/inland-ecdis">OpenCPN Inland ECDIS Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manuals" data-version="en">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Multilingual Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Inland ECDIS Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../howtouse/howtouse.html">Using the Manual</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../installation/installation.html">Installing OpenCPN</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting_started/getting_started.html">Home Screen</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="charts.html">Charts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../GPS/gps.html">GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../AIS/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sources.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Multilingual Manual</span>
+    <span class="version"><img class=icon src="../../_/img/globe.svg">&nbsp;English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en">Multilingual Manual</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../nl/index.html">Nederlands</a>
+        </li>
+        <li class="version">
+          <a href="../../fr/index.html">Français</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">English</a>
+        </li>
+        <li class="version">
+          <a href="../../de/index.html">Deutsch</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Multilingual Manual</a></li>
+    <li><a href="../index.html">OpenCPN Inland ECDIS Manual</a></li>
+    <li><a href="charts.html">Charts</a></li>
+  </ul>
+</nav>
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other translations of page">English</button>
+  <div class="version-menu">
+    <a class="version" href="../../nl/charts/charts.html">Nederlands</a>
+    <a class="version" href="../../fr/charts/charts.html">Français</a>
+    <a class="version is-current" href="charts.html">English</a>
+    <a class="version" href="../../de/charts/charts.html">Deutsch</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/opencpn-manuals/inland-ecdis-docs/edit/main/en/modules/charts/pages/charts.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Charts</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Chart symbols and other information is shown <a href="https://raw.githubusercontent.com/cesniti/iehg_gitbook/edition-2.4/.gitbook/assets/ienc_eg_2_4_1_adopted_20180320.pdf">HERE</a></p>
+</div>
+<div class="paragraph">
+<p>Inland ENC charts (IENC) for EU Countries can be found <a href="https://www.vaarweginformatie.nl/frp/main/#/page/infra_enc">HERE</a></p>
+</div>
+<div class="paragraph">
+<p>OpenCPN makes downloading and updating IENC easier by using the <strong>Chart Downloader</strong> plugin. This is installed as part of the main OpenCPN installation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_downloading_and_installing_inland_ecdis_charts"><a class="anchor" href="#_downloading_and_installing_inland_ecdis_charts"></a>Downloading and installing Inland ECDIS Charts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><b class="button">Options</b> <span class="image"><img src="_images/2.0.jpg" alt="2.0"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.1.jpg" alt="2.1"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Charts</b> Select the <em>Chart Downloader</em> tab</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.2.jpg" alt="2.2"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Add Catalog</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.3.jpg" alt="2.3"></span></p>
+</div>
+<div class="paragraph">
+<p>Select <em>ChartCatalogs</em> and press <b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p><strong>ENC</strong> Electronic navigational charts are charts where the objects and amount of detail needed for Inland ECDIS can be selected by the user. These charts are used in the Inland ECDIS Information Mode.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.4.jpg" alt="2.4"></span></p>
+</div>
+<div class="paragraph">
+<p>Select <em>The Netherlands Inland ENC Charts</em></p>
+</div>
+<div class="paragraph">
+<p><b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p>An entry for the Netherlands charts appears in the catalog.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.5.jpg" alt="2.5"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Update</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.6.jpg" alt="2.6"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Download selected charts</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.7.jpg" alt="2.7"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Apply</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.8.jpg" alt="2.8"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Add Directory</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.9.jpg" alt="2.9"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Select Folder</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.10.jpg" alt="2.10"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Apply</b> <b class="button">OK</b></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customising_the_chart_display"><a class="anchor" href="#_customising_the_chart_display"></a>Customising the chart display</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Move the base chart until you can see the Netherlands.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.11.jpg" alt="2.11"></span></p>
+</div>
+<div class="paragraph">
+<p>On the right of the display some of the chart cells have not appeared. They will become visible if the cell is moved towards the centre of the display, as the cell is loaded. To avoid this delay:</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Options</b> <b class="button">Charts</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.12.jpg" alt="2.12"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Prepare all ENC Charts</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.13.jpg" alt="2.13"></span></p>
+</div>
+<div class="paragraph">
+<p>It may take some time to load all the cells.</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Apply</b> <b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.14.jpg" alt="2.14"></span></p>
+</div>
+<div class="paragraph">
+<p>Untick <em>Show Chart Outlines</em> in <strong>Display Options</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.15.jpg" alt="2.15"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.16.jpg" alt="2.16"></span></p>
+</div>
+<div class="paragraph">
+<p>A <strong>Piano Bar</strong> shows the bottom of the display. This indicates the charts available for the field of view. Hovering the cursor over a button highlights the area covered by the cell and displays information about the cell, such as the date last updated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_updating_your_charts"><a class="anchor" href="#_updating_your_charts"></a>Updating your Charts</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title"><strong>Chart Updates</strong></div>
+<div class="paragraph">
+<p>It is important that regular checks are made for updates for the charts in use.
+<a href="https://www.vaarweginformatie.nl/frp/main/">https://www.vaarweginformatie.nl/frp/main/</a>
+This multilingual website has links for downloading the latest charts.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><b class="button">Options</b> <b class="button">Charts</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Chart Downloader</em></strong></p>
+</div>
+<div class="paragraph">
+<p><em>Select Catalog&#8230;&#8203;</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.18.jpg" alt="2.18"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Update</b></p>
+</div>
+<div class="paragraph">
+<p><em>Download Charts&#8230;&#8203;</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.19.jpg" alt="2.19"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Download selected charts</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.20.jpg" alt="2.20"></span></p>
+</div>
+<div class="paragraph">
+<p><em>Zeeland Compleet Week 18-2022</em> has failed to update. In this case it was necessary to use the link:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.vaarweginformatie.nl/frp/main/" class="bare">https://www.vaarweginformatie.nl/frp/main/</a></p>
+</div>
+<div class="paragraph">
+<p>Here you see <em>Zeeland Compleet Week 19-2022</em>. Download and extract the files from the zip to the ENC directory. Then add a new directory for charts:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.21.jpg" alt="2.21"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Prepare all ENC Charts</b></p>
+</div>
+<div class="paragraph">
+<p>Week 19 files will be used instead of Week 18.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_more_charts"><a class="anchor" href="#_add_more_charts"></a>Add more Charts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is straightforward for adding German charts.</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Options</b> <b class="button">Charts</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Select Catalog&#8230;&#8203;</em></strong></p>
+</div>
+<div class="paragraph">
+<p>*<span class="image"><img src="_images/2.22.jpg" alt="2.22"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Add Catalog</em></strong></p>
+</div>
+<div class="paragraph">
+<p>Browse for <em>Germany Inland ENC Charts</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.23.jpg" alt="2.23"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.24.jpg" alt="2.24"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Update</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Download Charts&#8230;&#8203;</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.25.jpg" alt="2.25"></span></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Download selected charts</b></p>
+</div>
+<div class="paragraph">
+<p>This can take some time.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.26.jpg" alt="2.26"></span></p>
+</div>
+<div class="paragraph">
+<p>Two 'Out of date' charts are found.</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Download selected charts</b></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Options</b> <b class="button">Charts</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Chart Files</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.27.jpg" alt="2.27"></span></p>
+</div>
+<div class="paragraph">
+<p>To avoid delay in quilting.</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Prepare all ENC Charts</b></p>
+</div>
+<div class="paragraph">
+<p><b class="button">Apply</b> <b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p>We have now added Dutch and German ENC charts to OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Chart Panel Options</em></strong></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Show Chart Outlines</em></strong> will show the ENC cells available.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.28.jpg" alt="2.28"></span></p>
+</div>
+<div class="paragraph">
+<p>Zoom in for the chart detail.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_information_from_chart_cells"><a class="anchor" href="#_additional_information_from_chart_cells"></a>Additional Information from Chart Cells</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As well as the standard chart view extra detail is provided.</p>
+</div>
+<div class="paragraph">
+<p>This is an Austrian chart in an area close to Vienna.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.29.jpg" alt="2.29"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>right-click</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.29.1.jpg" alt="2.29.1"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Object Query&#8230;&#8203;</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.30.jpg" alt="2.30"></span></p>
+</div>
+<div class="paragraph">
+<p>The attribute <strong>PICREP</strong> has a link to an image file for the bridge.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.31.jpg" alt="2.31"></span></p>
+</div>
+<div class="paragraph">
+<p>Interesting to note that the clearance 8.5m is shown on the chart close to the centreline of the channel. From the image 11.22m is available at the centre of the bridge.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.32.jpg" alt="2.32"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>right-click</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/2.33.jpg" alt="2.33"></span></p>
+</div>
+<div class="paragraph">
+<p>The object is a <em>Notice mark</em>.</p>
+</div>
+<div class="paragraph">
+<p>Attribute <strong>catnmk</strong>  maximum number of vessels permitted to berth abreast.</p>
+</div>
+<div class="paragraph">
+<p>Attribute <strong>INFORM</strong>  maximum number of vessels allowed to berth 3, but no cargo vessels.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://ienc-kennisportaal.nl/wp-content/uploads/2016/09/O.3.1-Notice-Marks.pdf" class="bare">https://ienc-kennisportaal.nl/wp-content/uploads/2016/09/O.3.1-Notice-Marks.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Much greater detail for the encoding of IENC:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://ienc-kennisportaal.nl/wp-content/uploads/2021/10/2019_12_24_RIS_Index_Encoding_Guide_v3p0-rev.2.pdf" class="bare">https://ienc-kennisportaal.nl/wp-content/uploads/2021/10/2019_12_24_RIS_Index_Encoding_Guide_v3p0-rev.2.pdf</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://github.com/Rasbats/antora-ui-default
+  </p>
+</footer>
+<script type="text/javascript">
+(function() {
+  var input = document.getElementById ("search-input")
+  var searchText = i18n.gettext('Search the docs')
+  input.placeholder = searchText
+})();
+
+var brand = document.getElementsByClassName("navbar-brand")[0]
+var items = brand.getElementsByClassName("navbar-item");
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i])
+    var title = i18n.gettext (items[i].innerHTML)
+    items[i].innerHTML = title
+  }
+
+  var site = document.getElementById("site-lang")
+  var doc = document.getElementById("page-lang")
+  console.log(doc)
+  site.title = i18n.gettext('Site language')
+
+  if(document.getElementById('page-lang') != null){
+      doc.title = i18n.gettext('Document language')
+    }
+
+  var edit = document.getElementsByClassName("edit-this-page")[0]
+  if (document.getElementsByClassName("edit-this-page").length > 0) {
+      edit.innerHTML = i18n.gettext('Edit this page')
+    }
+
+</script>
+
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

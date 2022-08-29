@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ubuntu ppa :: OpenCPN Inland ECDIS Manual</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+    <link rel="alternate" hreflang="nl" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html" >
+    <link rel="alternate" hreflang="fr" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html" >
+    <link rel="alternate" hreflang="en" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html" >
+    <link rel="alternate" hreflang="de" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/de/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html" >
+
+<script src="../../../_/js/vendor/gettext.iife.js" type="text/javascript"></script>
+<script>
+  var i18n = window.i18n();
+  // include and initialize the rollbar library with your access token
+  // i18n.setMessages(domain, locale, messages, plural_form);
+  i18n.setMessages('messages', 'fr', {
+      "Welcome": "Bienvenue",
+      "Contents": "Sur cette page...",
+      "Edit this page": "Éditer cette page...",
+      "Search the docs": "Rechercher...",
+      "Component": "Composant",
+      "Prev": "Précédent.",
+      "Next": "Suivant",
+      "Document language": "Langue du document",
+      "Site language": "Langue du site",
+      "There is %1 apple": [
+          "Il y a %1 pomme",
+          "Il y a %1 pommes"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'de', {
+      "Welcome": "I dan se",
+      "Contents": "Inhalt",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'nl', {
+      "Welcome": "I dan se",
+      "Contents": "inhoud",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/inland-ecdis">OpenCPN Inland ECDIS Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manuals" data-version="en">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Multilingual Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Inland ECDIS Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../howtouse/howtouse.html">Using the Manual</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../installation/installation.html">Installing OpenCPN</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting_started/getting_started.html">Home Screen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../charts/charts.html">Charts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../GPS/gps.html">GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../AIS/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sources.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Multilingual Manual</span>
+    <span class="version"><img class=icon src="../../_/img/globe.svg">&nbsp;English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en">Multilingual Manual</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../nl/index.html">Nederlands</a>
+        </li>
+        <li class="version">
+          <a href="../../fr/index.html">Français</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">English</a>
+        </li>
+        <li class="version">
+          <a href="../../de/index.html">Deutsch</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Multilingual Manual</a></li>
+    <li><a href="configuring_ubuntu_ppa.html">Ubuntu ppa</a></li>
+  </ul>
+</nav>
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other translations of page">English</button>
+  <div class="version-menu">
+    <a class="version" href="../../nl/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html">Nederlands</a>
+    <a class="version" href="../../fr/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html">Français</a>
+    <a class="version is-current" href="configuring_ubuntu_ppa.html">English</a>
+    <a class="version" href="../../de/configuring_ubuntu_ppa/configuring_ubuntu_ppa.html">Deutsch</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/opencpn-manuals/inland-ecdis-docs/edit/main/en/modules/configuring_ubuntu_ppa/pages/configuring_ubuntu_ppa.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Ubuntu ppa</h1>
+<div class="sect1">
+<h2 id="_adding_the_opencpn_ppa_to_a_ubuntu_system"><a class="anchor" href="#_adding_the_opencpn_ppa_to_a_ubuntu_system"></a><strong>Adding the OpenCPN PPA to a Ubuntu system</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With a commandline terminal enter the following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:opencpn/opencpn
+sudo apt-get update
+sudo apt-get install opencpn</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://github.com/Rasbats/antora-ui-default
+  </p>
+</footer>
+<script type="text/javascript">
+(function() {
+  var input = document.getElementById ("search-input")
+  var searchText = i18n.gettext('Search the docs')
+  input.placeholder = searchText
+})();
+
+var brand = document.getElementsByClassName("navbar-brand")[0]
+var items = brand.getElementsByClassName("navbar-item");
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i])
+    var title = i18n.gettext (items[i].innerHTML)
+    items[i].innerHTML = title
+  }
+
+  var site = document.getElementById("site-lang")
+  var doc = document.getElementById("page-lang")
+  console.log(doc)
+  site.title = i18n.gettext('Site language')
+
+  if(document.getElementById('page-lang') != null){
+      doc.title = i18n.gettext('Document language')
+    }
+
+  var edit = document.getElementsByClassName("edit-this-page")[0]
+  if (document.getElementsByClassName("edit-this-page").length > 0) {
+      edit.innerHTML = i18n.gettext('Edit this page')
+    }
+
+</script>
+
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

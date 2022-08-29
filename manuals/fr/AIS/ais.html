@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang=fr>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AIS :: OpenCPN Inland ECDIS Manual</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+    <link rel="alternate" hreflang="nl" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl/AIS/ais.html" >
+    <link rel="alternate" hreflang="fr" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr/AIS/ais.html" >
+    <link rel="alternate" hreflang="en" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en/AIS/ais.html" >
+    <link rel="alternate" hreflang="de" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/de/AIS/ais.html" >
+
+<script src="../../../_/js/vendor/gettext.iife.js" type="text/javascript"></script>
+<script>
+  var i18n = window.i18n();
+  // include and initialize the rollbar library with your access token
+  // i18n.setMessages(domain, locale, messages, plural_form);
+  i18n.setMessages('messages', 'fr', {
+      "Welcome": "Bienvenue",
+      "Contents": "Sur cette page...",
+      "Edit this page": "Éditer cette page...",
+      "Search the docs": "Rechercher...",
+      "Component": "Composant",
+      "Prev": "Précédent.",
+      "Next": "Suivant",
+      "Document language": "Langue du document",
+      "Site language": "Langue du site",
+      "There is %1 apple": [
+          "Il y a %1 pomme",
+          "Il y a %1 pommes"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'de', {
+      "Welcome": "I dan se",
+      "Contents": "Inhalt",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'nl', {
+      "Welcome": "I dan se",
+      "Contents": "inhoud",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="ocpn-logo"> </div>  
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/inland-ecdis">OpenCPN Inland ECDIS Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manuals" data-version="fr">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Multilingual Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Manuel ECDIS intérieur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../howtouse/howtouse.html">Utilisation du manuel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../installation/installation.html">Installation d&#8217;OpenCPN</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting_started/getting_started.html">Écran d&#8217;accueil</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../charts/charts.html">Cartes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../GPS/gps.html">GNSS</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ais.html">AIS</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Multilingual Manual</span>
+    <span class="version"><img class=icon src="../../_/img/globe.svg">&nbsp;Français</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr">Multilingual Manual</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../nl/index.html">Nederlands</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">Français</a>
+        </li>
+        <li class="version">
+          <a href="../../en/index.html">English</a>
+        </li>
+        <li class="version">
+          <a href="../../de/index.html">Deutsch</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../en/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Multilingual Manual</a></li>
+    <li><a href="../index.html">OpenCPN Manuel ECDIS intérieur</a></li>
+    <li><a href="ais.html">AIS</a></li>
+  </ul>
+</nav>
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other translations of page">Français</button>
+  <div class="version-menu">
+    <a class="version" href="../../nl/AIS/ais.html">Nederlands</a>
+    <a class="version is-current" href="ais.html">Français</a>
+    <a class="version" href="../../en/AIS/ais.html">English</a>
+    <a class="version" href="../../de/AIS/ais.html">Deutsch</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/opencpn-manuals/inland-ecdis-docs/edit/main/fr/modules/AIS/pages/ais.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AIS</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.0.jpg" alt="9.0"></span></p>
+</div>
+<div class="paragraph">
+<p>Câble "AIS Pilotplug to USB"</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.00.jpg" alt="9.00"></span></p>
+</div>
+<div class="paragraph">
+<p>Récepteur AIS de base</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title"><strong>Paramètres OpenCPN AIS</strong></div>
+<div class="paragraph">
+<p>Pour obtenir les meilleures performances et éviter d&#8217;encombrer l&#8217;écran, les paramètres de cible AIS doivent être ajustés. Cela aidera à réduire le nombre d&#8217;alarmes non pertinentes</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connexion_du_récepteur_ais"><a class="anchor" href="#_connexion_du_récepteur_ais"></a>Connexion du récepteur AIS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un récepteur AIS peut être connecté de la même manière que le GNSS. Le débit de données AIS typique est de 38 400, au lieu de 4 800.
+Cependant, le moyen le plus simple est de vous procurer un câble "AIS Pilotplug to USB". Cela vous donnera également une position GNSS (pas besoin d&#8217;un GNSS séparé)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_paramètres_de_réglage_des_cibles_ais"><a class="anchor" href="#_paramètres_de_réglage_des_cibles_ais"></a>Paramètres de réglage des cibles AIS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><b class="button">Options</b> <b class="button">Bateaux</b></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Cibles AIS</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.1.jpg" alt="9.1"></span></p>
+</div>
+<div class="paragraph">
+<p>Les paramètres typiques sont affichés.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.2.jpg" alt="9.2"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interprétation_des_informations_ais"><a class="anchor" href="#_interprétation_des_informations_ais"></a>Interprétation des informations AIS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong><em>clic-droit</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.3.jpg" alt="9.3"></span></p>
+</div>
+<div class="paragraph">
+<p>Le texte survolé indique le nom, le numéro MMSI et la nationalité du navire.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.4.jpg" alt="9.4"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Cible requise &#8230;&#8203;</em></strong> (AIS Class B)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.5.jpg" alt="9.5"></span></p>
+</div>
+<div class="paragraph">
+<p>Le navire concerné est mis en évidence par un rectangle brisé</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.6.jpg" alt="9.6"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Cible requise &#8230;&#8203;</em></strong> (AIS Class B)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.7.jpg" alt="9.7"></span></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Liste des cibles &#8230;&#8203;</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.8.jpg" alt="9.8"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interprétation_des_informations_ais_2"><a class="anchor" href="#_interprétation_des_informations_ais_2"></a>Interprétation des informations AIS</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Icone_AIS</th>
+<th class="tableblock halign-left valign-top">Information</th>
+<th class="tableblock halign-left valign-top">Icone_AIS</th>
+<th class="tableblock halign-left valign-top">Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/sart4.png" alt="image" width="52" height="48"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un AIS actif SART et est un appel de <strong>détresse</strong> égal à une transmission <strong>"Mayday"</strong>. Suite à ce sujet sur ce lien : ais/sart.html[sart]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La poupe en forme de V indique une cible de classe B.
+Les remorqueurs et les bateaux-pilotes embarquent très souvent des transpondeurs de classe B.
+Ceux-ci sont souvent conçus spécifiquement pour les petits bateaux commerciaux, les bateaux de pêche et les bateaux de plaisance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La poupe en forme de V indique une cible de classe B. Très souvent, les remorqueurs et les bateaux-pilotes
+disposent de transpondeurs de classe B. Ceux-ci sont souvent conçus spécifiquement pour les petits bateaux commerciaux, les bateaux de pêche et les bateaux de plaisance.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/sart5.png" alt="image" width="45" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Icône affichée lors du <strong>test</strong> un appareil AIS-SART.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dark-green.png" alt="image" width="45"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les objectifs sont conformes avec la norme européenne <a href="http://www.cruisersforum.com/forums/tags/ais.html">AIS</a>
+Spécification intérieure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/nr9.png" alt="image" width="51" height="49"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avion participant à la recherche et au sauvetage.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/inland-blue.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ce navire arbore le "Drapeau Bleu Inland", AIS standard Européen. Le signal "Pavillon bleu", couramment vu à l&#8217;intérieur des terres, sur l&#8217;eau, indique que le navire demande un passage ou une traversée « stbd-stbd » . Ce signal bleu est allumé/éteint manuellement par la cible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-red.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Danger potentiel.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aton, aide à la navigation, par exemple un phare ou une bouée avec un émetteur AIS.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aton, Aide à la navigation, par exemple un Phare ou une Bouée avec un émetteur
+AIS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-yellow.png" alt="image" width="51" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aucun danger
+Non identifié (nom issu des données mises en cache)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aton_off.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aton, Aide à la navigation qui est hors de sa position supposée. Par exemple, une bouée équipée de l&#8217;AIS qui est à la dérive.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-lemon.png" alt="image" width="47" height="47"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aucun danger
+Non identifié (nom issu des données mises en cache)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/vaton.png" alt="image" width="45" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aton Virtuel,
+Aide Virtuelle à la navigation, pas un vrai marqueur. Peut être utile pour un ensemble de
+de situations. Uns nouvelle épave, par exemple.
+<a href="http://www.gla-rrnav.org/radionavigation/ais/virtual_aton.html">Further
+explanations.</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-green.png" alt="image" width="50" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aucun danger
+Aucun danger
+identifié</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/33vofpos.png" alt="image" width="46" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aton virtuel, hors position. Actuellement vu dans la nature, mais peut être une erreur de configuration de l&#8217;utilisateur
+. (Ancien affichage de style.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-lost.png" alt="image" width="50" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cible perdue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/basestn.png" alt="image" width="45" height="43"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station AIS de base</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-grey.png" alt="image" width="48" height="51"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vaisseau dont la position est perdue - position indisponible. Affiché à la dernière position connue.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les cibles suivantes ne s&#8217;affichent que si les messages DSC, les messages de GpsGate, les messages Radar ou APRS sont mélangés au flux AIS
+entrant, en utilisant, par exemple, un multiplexeur. Plus d&#8217;information dans les pages suivantes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/notundcom.png" alt="image" width="50" height="54"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navire hors de contrôle.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dsc-ok.png" alt="image" width="45" height="44"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station DSC. Seul le message DSC est reçu. La position ne contient que
+degrés et minutes de Latitude et de Longitude.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/restrman_1.png" alt="image" width="51" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navire limité dans la capacité de manoeuvre.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dse1.png" alt="image" width="44" height="46"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Station DSC. DSC <strong>et</strong> messages DSE sont reçus. Le message DSE contient les décimales manquantes de minutes de Latitude et de Longitude. Le résultat est une position bien plus précise.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ifeahche_1.png" alt="image" width="51" height="50"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navire contraint par avarie.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/dsc-not-ok.png" alt="image" width="45" height="42"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSC Station transmettant un signal de <strong>détresse</strong>. Considérez ceci comme un appel <strong>« Maiday »</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aground.png" alt="image" width="52" height="52"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le navire
+échoué.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/bud-icon.png" alt="image" width="46" height="45"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GpsGate Buddy target.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/fishing.png" alt="image" width="51" height="45"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navire en pêche.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/arpa2.png" alt="image" width="45" height="49"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cibles AIS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/hsc.png" alt="image" width="50" height="52"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bateau à grande vitesse et aile à effet de sol. Cela inclut les hydrofoils, les aéroglisseurs et les embarcations de vol inférieures utilisant l&#8217;effet de sol.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/aprs.png" alt="image" width="44" height="48"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cible ARPA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/ais-moor.png" alt="image" width="54" height="54"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ancré ou amarré. Affiché lorsque le "statut de navigation" transmis est "à l&#8217;ancre" ou "amarré". Il n&#8217;y a aucune garantie que ce statut soit correct, car il est réglé manuellement sur le vaisseau transmetteur…</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="_images/moored.png" alt="image" width="54" height="40"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">…illustré par ce navire. Notez la ligne noire sur le cercle jaune. Cela indique que le vaisseau change de direction vers babord (à gauche), également illustré par le décalage dans la mise à jour de l&#8217;affichage. ROT - Le taux de virage est disponible dans la boîte de dialogue « Données émise par la cible AIS », via le menu du clic droit d&#8217;OpenCPN.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exemples_ais"><a class="anchor" href="#_exemples_ais"></a>Exemples AIS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.9.jpg" alt="9.9"></span></p>
+</div>
+<div class="paragraph">
+<p>Un navire à la jonction semble changer de cours pour entrer dans le canal « our ».</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Clic-droit</em></strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.10.jpg" alt="9.10"></span></p>
+</div>
+<div class="paragraph">
+<p>Le navire est identifié.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.11.jpg" alt="9.11"></span></p>
+</div>
+<div class="paragraph">
+<p>'Zeldenrust' est un danger potentiel et a déclenché une alerte en fonction des paramètres entrés dans OpenCPN.</p>
+</div>
+<div class="paragraph">
+<p>La longueur des flèches du prédicteur COG est fixée à trois minutes.</p>
+</div>
+<div class="paragraph">
+<p>Il y a une ligne d&#8217;extension en pointillés rouge du prédicteur COG qui aide à fournir une estimation du temps à CPA, si <em>target query</em> n&#8217;a pas été utilisée.</p>
+</div>
+<div class="paragraph">
+<p>Les positions estimées des navires au CPA sont montrées par les points bleus.</p>
+</div>
+<div class="paragraph">
+<p>La ligne jaune surlignée indique la distance à partir du CPA.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.14.jpg" alt="9.14"></span></p>
+</div>
+<div class="paragraph">
+<p>"Zeldenrust" est allé plus loin et va maintenant passer à notre babord. CPA 48,5 m.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.15.jpg" alt="9.15"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/9.17.jpg" alt="9.17"></span></p>
+</div>
+<div class="paragraph">
+<p>"Zeldenrust" est passé et tout va bien.</p>
+</div>
+<div class="paragraph">
+<p>Le navire "Neptune repair" est un danger potentiel mais il est amarré.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://github.com/Rasbats/antora-ui-default
+  </p>
+</footer>
+<script type="text/javascript">
+(function() {
+  var input = document.getElementById ("search-input")
+  var searchText = i18n.gettext('Search the docs')
+  input.placeholder = searchText
+})();
+
+var brand = document.getElementsByClassName("navbar-brand")[0]
+var items = brand.getElementsByClassName("navbar-item");
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i])
+    var title = i18n.gettext (items[i].innerHTML)
+    items[i].innerHTML = title
+  }
+
+  var site = document.getElementById("site-lang")
+  var doc = document.getElementById("page-lang")
+  console.log(doc)
+  site.title = i18n.gettext('Site language')
+
+  if(document.getElementById('page-lang') != null){
+      doc.title = i18n.gettext('Document language')
+    }
+
+  var edit = document.getElementsByClassName("edit-this-page")[0]
+  if (document.getElementsByClassName("edit-this-page").length > 0) {
+      edit.innerHTML = i18n.gettext('Edit this page')
+    }
+
+</script>
+
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

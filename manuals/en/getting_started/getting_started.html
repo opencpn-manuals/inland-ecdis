@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home Screen :: OpenCPN Inland ECDIS Manual</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+    <link rel="alternate" hreflang="nl" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/nl/getting_started/getting_started.html" >
+    <link rel="alternate" hreflang="fr" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/fr/getting_started/getting_started.html" >
+    <link rel="alternate" hreflang="en" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en/getting_started/getting_started.html" >
+    <link rel="alternate" hreflang="de" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/de/getting_started/getting_started.html" >
+
+<script src="../../../_/js/vendor/gettext.iife.js" type="text/javascript"></script>
+<script>
+  var i18n = window.i18n();
+  // include and initialize the rollbar library with your access token
+  // i18n.setMessages(domain, locale, messages, plural_form);
+  i18n.setMessages('messages', 'fr', {
+      "Welcome": "Bienvenue",
+      "Contents": "Sur cette page...",
+      "Edit this page": "Éditer cette page...",
+      "Search the docs": "Rechercher...",
+      "Component": "Composant",
+      "Prev": "Précédent.",
+      "Next": "Suivant",
+      "Document language": "Langue du document",
+      "Site language": "Langue du site",
+      "There is %1 apple": [
+          "Il y a %1 pomme",
+          "Il y a %1 pommes"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'de', {
+      "Welcome": "I dan se",
+      "Contents": "Inhalt",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+  i18n.setMessages('messages', 'nl', {
+      "Welcome": "I dan se",
+      "Contents": "inhoud",
+      "Edit this page": "Sɛbɛ nin yɛlɛma",
+      "Search the docs": "I be sɛbɛ ɲini yan",
+      "Component": "Yɔrɔ",
+      "Prev": "Kɔfɛta",
+      "Next": "Nɔfɛta",
+      "Document language": "Sɛbɛ kaan",
+      "Site language": "Site web kaan",
+      "There is %1 apple": [
+          "pomme %1 be yen",
+          "pomme %1 be yen"
+        ]
+    }, 'nplurals=2; plural=n>1;');
+</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="ocpn-logo"> </div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://opencpn-manuals.github.io/inland-ecdis">OpenCPN Inland ECDIS Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manuals" data-version="en">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Multilingual Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Inland ECDIS Manual</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../howtouse/howtouse.html">Using the Manual</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../installation/installation.html">Installing OpenCPN</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="getting_started.html">Home Screen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../charts/charts.html">Charts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../GPS/gps.html">GNSS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../AIS/ais.html">AIS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sources.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Multilingual Manual</span>
+    <span class="version"><img class=icon src="../../_/img/globe.svg">&nbsp;English</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="https://opencpn-manuals.github.io/inland-ecdis/manuals/en">Multilingual Manual</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../nl/index.html">Nederlands</a>
+        </li>
+        <li class="version">
+          <a href="../../fr/index.html">Français</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">English</a>
+        </li>
+        <li class="version">
+          <a href="../../de/index.html">Deutsch</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Multilingual Manual</a></li>
+    <li><a href="../index.html">OpenCPN Inland ECDIS Manual</a></li>
+    <li><a href="getting_started.html">Home Screen</a></li>
+  </ul>
+</nav>
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other translations of page">English</button>
+  <div class="version-menu">
+    <a class="version" href="../../nl/getting_started/getting_started.html">Nederlands</a>
+    <a class="version" href="../../fr/getting_started/getting_started.html">Français</a>
+    <a class="version is-current" href="getting_started.html">English</a>
+    <a class="version" href="../../de/getting_started/getting_started.html">Deutsch</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/opencpn-manuals/inland-ecdis-docs/edit/main/en/modules/getting_started/pages/getting_started.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Home Screen</h1>
+<div class="sect1">
+<h2 id="_initial_display"><a class="anchor" href="#_initial_display"></a>Initial Display</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may have chosen to start OpenCPN at the end of the installation. If not start the program now. You will be presented with a screen like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.0.jpg" alt="1.0"></span></p>
+</div>
+<div class="paragraph">
+<p>Control areas are displayed on the screen. Many of the options will be explained later. The focus in this manual will be the options needed for basic use.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.1.jpg" alt="1.1"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Tool Bar</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><b class="button">Hamburger</b> <span class="image"><img src="_images/1.2.jpg" alt="1.2"></span> Clicking on the tool bar 'hamburger' symbol makes the tool bar contract/expand.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Chart Panel Options</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><b class="button">Hamburger</b> <span class="image"><img src="_images/1.3.jpg" alt="1.3"></span> The chart panel 'hamburger' opens/closes the panel to display a number of options.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.4.jpg" alt="1.4"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Compass/GPS Status Window</strong></p>
+</li>
+<li>
+<p><strong>Status Bar</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title"><strong>Inland ECDIS Settings</strong></div>
+<div class="paragraph">
+<p>It is important that the display is set up as described in the following section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inland_ecdis_specific_settings"><a class="anchor" href="#_inland_ecdis_specific_settings"></a>Inland ECDIS Specific Settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><b class="button">Options</b> <span class="image"><img src="_images/1.5.1.jpg" alt="1.5.1"></span> <b class="button">User Interface</b> <span class="image"><img src="_images/1.5.jpg" alt="1.5"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.6.jpg" alt="1.6"></span></p>
+</div>
+<div class="paragraph">
+<p>Tick the box for <strong>Use Inland ECDIS</strong>.</p>
+</div>
+<div class="paragraph">
+<p><b class="button">Apply</b> <b class="button">OK</b></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.7.jpg" alt="1.7"></span></p>
+</div>
+<div class="paragraph">
+<p>The display has changed to the 'dusk' colour scheme.</p>
+</div>
+<div class="paragraph">
+<p>To return to the 'daylight' scheme <b class="button">Change Color Scheme</b> <span class="image"><img src="_images/1.10.jpg" alt="1.10"></span> The shortcut is <b class="button">F5</b> on the keyboard. This cycles through the night, dusk, and daylight colour schemes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.8.jpg" alt="1.8"></span></p>
+</div>
+<div class="paragraph">
+<p>Speeds and distances are in km/h and km/meters when in iECDIS mode</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.9.jpg" alt="1.9"></span></p>
+</div>
+<div class="paragraph">
+<p>Each time OpenCPN is started the default display will use the dusk colour scheme and may need to be changed. The toolbar needs moving, by dragging it to the side of the display.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/1.11.jpg" alt="1.11"></span></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.
+     Sources: https://github.com/Rasbats/antora-ui-default
+  </p>
+</footer>
+<script type="text/javascript">
+(function() {
+  var input = document.getElementById ("search-input")
+  var searchText = i18n.gettext('Search the docs')
+  input.placeholder = searchText
+})();
+
+var brand = document.getElementsByClassName("navbar-brand")[0]
+var items = brand.getElementsByClassName("navbar-item");
+for (let i = 0; i < items.length; i++) {
+    console.log(items[i])
+    var title = i18n.gettext (items[i].innerHTML)
+    items[i].innerHTML = title
+  }
+
+  var site = document.getElementById("site-lang")
+  var doc = document.getElementById("page-lang")
+  console.log(doc)
+  site.title = i18n.gettext('Site language')
+
+  if(document.getElementById('page-lang') != null){
+      doc.title = i18n.gettext('Document language')
+    }
+
+  var edit = document.getElementsByClassName("edit-this-page")[0]
+  if (document.getElementsByClassName("edit-this-page").length > 0) {
+      edit.innerHTML = i18n.gettext('Edit this page')
+    }
+
+</script>
+
+
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
